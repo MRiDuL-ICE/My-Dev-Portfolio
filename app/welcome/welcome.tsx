@@ -1,7 +1,7 @@
 // src/components/Welcome/Welcome.tsx
 import { motion } from "framer-motion";
 
-export function Welcome() {
+const Welcome = () => {
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -50,4 +50,6 @@ export function Welcome() {
       </div>
     </motion.section>
   );
-}
+};
+
+export default Welcome;
