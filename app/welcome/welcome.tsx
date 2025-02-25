@@ -1,5 +1,6 @@
 // src/components/Welcome/Welcome.tsx
 import { motion } from "framer-motion";
+import img from "../assests/Untitled design (4).png";
 
 const Welcome = () => {
   const containerVariants = {
@@ -47,6 +48,9 @@ const Welcome = () => {
             Contact Me
           </a>
         </motion.div>
+      </div>
+      <div className="h-[750px] w-[850px] rounded-full flex justify-center items-center">
+        <img className="w-[850px] h-[700px] rounded-full" src={img} alt="" />
       </div>
     </motion.section>
   );
