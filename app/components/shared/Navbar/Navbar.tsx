@@ -2,18 +2,50 @@ import React from "react";
 import { NavLink } from "react-router";
 import { ModeToggle } from "~/components/mode-toggle";
 import { House } from "lucide-react";
+import { CircleUserRound } from "lucide-react";
+import { FolderOpenDot } from "lucide-react";
+import { Contact } from "lucide-react";
 
 const Navbar = () => {
   const links = (
     <div className="flex gap-8 font-bold">
-      <NavLink className={"flex gap-1 items-center"} to={"/"}>
+      <NavLink
+        className={
+          "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+        }
+        to={"/"}
+      >
         {" "}
         <House />
         Home
       </NavLink>
-      <NavLink to={"/about"}>About</NavLink>
-      <NavLink to={"/projects"}>Projects</NavLink>
-      <NavLink to={"/contact"}>Contact</NavLink>
+      <NavLink
+        className={
+          "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+        }
+        to={"/about"}
+      >
+        <CircleUserRound />
+        About
+      </NavLink>
+      <NavLink
+        className={
+          "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+        }
+        to={"/projects"}
+      >
+        <FolderOpenDot />
+        Projects
+      </NavLink>
+      <NavLink
+        className={
+          "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+        }
+        to={"/contact"}
+      >
+        <Contact />
+        Contact
+      </NavLink>
     </div>
   );
   return (
