@@ -1,39 +1,17 @@
 import { motion } from "framer-motion";
-import img from "../assests/Untitled design (4).png";
+import img from "../../assests/Untitled design (4).png";
 
 const Banner = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
-    <motion.section
-      className="min-h-screen flex items-center justify-center"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    <motion.section className="min-h-screen flex items-center justify-center my-10">
       <div className="max-w-4xl mx-auto px-4">
-        <motion.h1 className="text-5xl font-bold mb-6" variants={itemVariants}>
+        <motion.h1 className="text-5xl font-bold mb-6">
           Hi, I'm Abdul Wahab
         </motion.h1>
-        <motion.p className="text-xl mb-8" variants={itemVariants}>
+        <motion.p className="text-xl mb-8">
           A Senior Software Engineer specializing in React and Node.js
         </motion.p>
-        <motion.div className="flex gap-4" variants={itemVariants}>
+        <motion.div className="flex gap-4">
           <a
             href="/projects"
             className="px-6 py-3 bg-blue-600 text-white rounded-lg"
