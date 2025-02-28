@@ -18,16 +18,14 @@ const Banner = () => {
         className="min-h-screen w-11/12 md:w-10/12 mx-auto flex md:flex-row flex-col-reverse items-center justify-between my-10"
       >
         <motion.div className="md:w-1/2">
-          <motion.h1 className="md:text-6xl text-3xl font-bold mb-6 decoration-dashed  uppercase">
+          <motion.h1 className="md:text-6xl text-xl font-bold md:mb-6 decoration-dashed  uppercase">
             Md. Abdul Wahab
           </motion.h1>
           <motion.p
-            className="md:text-xl mb-8"
+            className="md:text-[86px] text-2xl font-bold md:mb-8 my-2"
             style={{
               background: "linear-gradient(90deg, #00c2ff, #ff00e5, #00c2ff)",
               WebkitBackgroundClip: "text",
-              fontWeight: "bold",
-              fontSize: "86px",
               animation: "flowGradient 3s linear infinite",
               backgroundClip: "text",
               color: "transparent",
@@ -51,7 +49,7 @@ const Banner = () => {
             />
           </motion.p>
           <div>
-            <h2 className="text-3xl font-bold mb-8">
+            <h2 className="md:text-3xl font-bold mb-8">
               Based in Rajshahi, Bangladesh
             </h2>
           </div>
