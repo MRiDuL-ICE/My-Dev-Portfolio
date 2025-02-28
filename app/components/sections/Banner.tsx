@@ -54,7 +54,7 @@ const Banner = () => {
             </h2>
           </div>
           <motion.div className="flex gap-4">
-            <button className="px-5 flex gap-2 py-4 rounded-sm bg-[#009AE6] p-6  hover:bg-[#006be6] hover:text-white font-bold transform transition-all duration-300">
+            <button className="px-5 flex items-center gap-2 py-4 rounded-sm bg-[#009AE6] p-6  hover:bg-[#006be6] hover:text-white font-bold transform transition-all duration-300">
               <GrProjects />
               View My works
             </button>
