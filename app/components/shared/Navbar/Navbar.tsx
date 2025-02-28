@@ -5,6 +5,13 @@ import { House } from "lucide-react";
 import { CircleUserRound } from "lucide-react";
 import { FolderOpenDot } from "lucide-react";
 import { Contact } from "lucide-react";
+import { RiMenuFold4Fill } from "react-icons/ri";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTrigger,
+} from "~/components/ui/drawer";
 
 const Navbar = () => {
   const links = (
@@ -48,15 +55,77 @@ const Navbar = () => {
       </NavLink>
     </div>
   );
+
+  const sideLinks = (
+    <>
+      <div className="flex flex-col gap-8 font-bold text-white">
+        <NavLink
+          className={
+            "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+          }
+          to={"/"}
+        >
+          {" "}
+          <House />
+          Home
+        </NavLink>
+        <NavLink
+          className={
+            "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+          }
+          to={"/about"}
+        >
+          <CircleUserRound />
+          About
+        </NavLink>
+        <NavLink
+          className={
+            "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+          }
+          to={"/projects"}
+        >
+          <FolderOpenDot />
+          Projects
+        </NavLink>
+        <NavLink
+          className={
+            "flex gap-1 items-center hover:text-[#41C6FB] duration-300 transform transition-all"
+          }
+          to={"/contact"}
+        >
+          <Contact />
+          Contact
+        </NavLink>
+      </div>
+    </>
+  );
+
   return (
-    <div className="w-full fixed z-50 shadow-md s top-0 backdrop-blur-sm">
-      <div className="flex justify-between h-18 items-center w-10/12 mx-auto">
-        <div>
-          <h2 className="text-2xl font-bold">MRiDuL-ICE</h2>
+    <div className="w-full fixed z-50 shadow-md  top-0 backdrop-blur-sm mx-auto">
+      <div className="flex justify-between h-18 items-center  md:w-10/12 mx-auto w-11/12">
+        <div className="">
+          <h2 className="md:text-2xl font-bold">MRiDuL-ICE</h2>
         </div>
-        <div>{links}</div>
-        <div>
-          <ModeToggle></ModeToggle>
+        <div className="hidden md:flex">{links}</div>
+        <div className="flex items-center gap-4">
+          <div>
+            <ModeToggle></ModeToggle>
+          </div>
+          <div className=" md:hidden">
+            <Drawer direction="left">
+              <DrawerTrigger>
+                <RiMenuFold4Fill className="text-3xl" />
+              </DrawerTrigger>
+              <DrawerContent className="bg-[#202863]/45 backdrop-blur-sm px-4 py-6">
+                {sideLinks}
+                <DrawerClose>
+                  <button className="w-full my-4 bg-[#41C6FB] hover:bg-[#4198fb] rounded-sm py-1">
+                    close
+                  </button>
+                </DrawerClose>
+              </DrawerContent>
+            </Drawer>
+          </div>
         </div>
       </div>
     </div>
