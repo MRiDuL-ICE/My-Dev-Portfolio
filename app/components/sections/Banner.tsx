@@ -151,7 +151,12 @@ const Banner = () => {
               >
                 <Download />
               </motion.div>
-              Download Resume
+              <a
+                href="https://drive.google.com/file/d/1H3MAdMBUVSWnj7zxkhXrQSPx1fbz57rf/view?usp=sharing"
+                target="_blank"
+              >
+                Download Resume
+              </a>
             </motion.button>
 
             <motion.button
@@ -179,7 +184,12 @@ const Banner = () => {
               >
                 <PiSealCheckBold />
               </motion.div>
-              Hire Me
+              <a
+                href="https://www.linkedin.com/in/wahabmridul-ice/"
+                target="_blank"
+              >
+                Hire Me
+              </a>
             </motion.button>
           </motion.div>
 
