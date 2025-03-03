@@ -7,6 +7,7 @@ import { FolderOpenDot } from "lucide-react";
 import { Contact } from "lucide-react";
 import { RiMenuFold4Fill } from "react-icons/ri";
 import { motion } from "framer-motion";
+import logo from "../../../assests/M.png";
 import {
   Drawer,
   DrawerClose,
@@ -127,8 +128,9 @@ const Navbar = () => {
       variants={navbarVariants}
     >
       <div className="flex justify-between h-18 items-center md:w-10/12 mx-auto w-11/12">
-        <motion.div variants={itemVariants} className="">
-          <h2 className="md:text-2xl font-bold">MRiDuL-ICE</h2>
+        <motion.div variants={itemVariants} className="flex items-center gap-2">
+          <img className="md:w-12 w-8" src={logo} alt="" />
+          <h2 className="md:text-2xl text-sm font-bold">MRiDuL-ICE</h2>
         </motion.div>
 
         <div className="hidden md:flex">{links}</div>
@@ -138,7 +140,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="border border-[#009AE6] px-3 py-2 md:px-5 md:py-2 rounded-sm flex gap-2 items-center cursor-pointer"
+              className="border hidden border-[#009AE6] px-3 py-2 md:px-5 md:py-2 rounded-sm md:flex gap-2 items-center cursor-pointer"
             >
               <PiSealCheckBold />
               Hire Me
